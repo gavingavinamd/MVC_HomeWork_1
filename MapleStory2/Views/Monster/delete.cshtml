@@ -1,0 +1,44 @@
+﻿@model MapleStory2.Models.Monster
+
+@{
+    ViewData["Title"] = "delete";
+}
+
+<h1>delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Monster</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Atk)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Atk)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Hp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Hp)
+        </dd>
+    </dl>
+    
+    <form asp-action="delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
